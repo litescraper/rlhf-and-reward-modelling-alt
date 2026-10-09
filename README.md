@@ -2490,3 +2490,12 @@ $$\mathcal{L}_{DPO} = -\mathbb{E}_{(x,y_w,y_l)}\!\left[\log \sigma\!\left(\beta 
 - [PyTorch FSDP (Zhao et al., 2023)](https://arxiv.org/abs/2304.11277) — PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel
 - [Plan-and-Solve Prompting (Wang et al., 2023)](https://arxiv.org/abs/2305.04091) — Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning
 - [LoRA (Hu et al., 2021)](https://arxiv.org/abs/2106.09685) — Low-Rank Adaptation of Large Language Models (see also Extension 4)
+
+
+## Serper-compatible endpoints
+
+Set `SERPER_BASE_URL` to a compatible API base (without a search route) and
+use that provider's key in the existing Serper API-key configuration. The
+base defaults to `https://google.serper.dev`; trailing slashes are removed
+before adding the existing route. Separate page-scraping endpoints are unchanged.
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).

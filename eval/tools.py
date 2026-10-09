@@ -235,7 +235,7 @@ def _live_search(query: str, api_key: Optional[str] = None) -> str:
     try:
         import requests
         response = requests.post(
-            "https://google.serper.dev/search",
+            f'{os.getenv("SERPER_BASE_URL", "https://google.serper.dev").rstrip("/")}/search',
             headers={"X-API-KEY": key, "Content-Type": "application/json"},
             json={"q": query, "num": 3},
             timeout=10,
